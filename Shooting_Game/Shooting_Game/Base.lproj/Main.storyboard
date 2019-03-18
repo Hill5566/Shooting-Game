@@ -85,13 +85,14 @@
                                     <constraint firstAttribute="width" constant="18" id="kua-A8-xpF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-it-LAH">
-                                <rect key="frame" x="147.5" y="441" width="80" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-it-LAH">
+                                <rect key="frame" x="147.5" y="443" width="80" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plane"/>
                                 <connections>
+                                    <action selector="aircraftTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="TVl-2U-vGR"/>
+                                    <action selector="aircraftTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1F-bw-qYc"/>
                                     <action selector="dragPlan:event:" destination="BYZ-38-t0r" eventType="touchDragInside" id="Qa0-iI-yTM"/>
-                                    <action selector="planTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fV-qf-iGc"/>
                                 </connections>
                             </button>
                         </subviews>

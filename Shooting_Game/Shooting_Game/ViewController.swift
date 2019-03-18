@@ -65,8 +65,13 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func planTouchUpInside(_ sender: UIButton) {
+    @IBAction func aircraftTouchUpInside(_ sender: UIButton) {
         lastTouchesPoint = CGPoint(x: 0, y: 0)
+    }
+    
+    @IBAction func aircraftTouchDown(_ sender: UIButton) {
+        sender.setTitle("", for: .normal)
+        sender.setTitleColor(.blue, for: .normal)
     }
     
 }

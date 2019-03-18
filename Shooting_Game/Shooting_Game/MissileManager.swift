@@ -12,7 +12,7 @@ class MissileManager {
     
     static func fire(missile:Missile, aircraft:UIButton, atSpace view:UIView) {
         let bullet = UIImageView(image: UIImage(named: missile.getImageName()))
-        bullet.center = CGPoint(x: aircraft.center.x, y: aircraft.frame.origin.y - 8)
+        bullet.center = CGPoint(x: aircraft.center.x, y: aircraft.frame.origin.y - 16)
         view.addSubview(bullet)
         UIView.animate(withDuration: missile.getSpeed(), delay: 0, options: [.curveLinear], animations: {
             bullet.center.y = bullet.center.y - 2000
