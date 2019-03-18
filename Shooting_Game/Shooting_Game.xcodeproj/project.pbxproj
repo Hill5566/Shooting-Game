@@ -12,6 +12,7 @@
 		E9E6AEB5223F443B000DCB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E6AEB3223F443B000DCB83 /* Main.storyboard */; };
 		E9E6AEB7223F443C000DCB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9E6AEB6223F443C000DCB83 /* Assets.xcassets */; };
 		E9E6AEBA223F443C000DCB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E6AEB8223F443C000DCB83 /* LaunchScreen.storyboard */; };
+		E9E6AEC2223F4745000DCB83 /* MissleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6AEC1223F4745000DCB83 /* MissleManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E9E6AEB6223F443C000DCB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9E6AEB9223F443C000DCB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9E6AEBB223F443C000DCB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9E6AEC1223F4745000DCB83 /* MissleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				E9E6AEAF223F443B000DCB83 /* AppDelegate.swift */,
 				E9E6AEB1223F443B000DCB83 /* ViewController.swift */,
+				E9E6AEC1223F4745000DCB83 /* MissleManager.swift */,
 				E9E6AEB3223F443B000DCB83 /* Main.storyboard */,
 				E9E6AEB6223F443C000DCB83 /* Assets.xcassets */,
 				E9E6AEB8223F443C000DCB83 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E6AEC2223F4745000DCB83 /* MissleManager.swift in Sources */,
 				E9E6AEB2223F443B000DCB83 /* ViewController.swift in Sources */,
 				E9E6AEB0223F443B000DCB83 /* AppDelegate.swift in Sources */,
 			);
