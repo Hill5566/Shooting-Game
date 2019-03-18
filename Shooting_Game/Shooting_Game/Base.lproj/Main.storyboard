@@ -115,10 +115,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="aircraft" destination="Ojd-it-LAH" id="T7f-pl-5G1"/>
                         <outlet property="countLabel" destination="Tut-ms-FeN" id="14i-Ju-p9E"/>
                         <outlet property="fireButton" destination="5NN-TS-Wua" id="F6L-Fr-nxS"/>
-                        <outlet property="missleImageView" destination="udX-GE-vNU" id="0d7-eb-Ds8"/>
-                        <outlet property="plan" destination="Ojd-it-LAH" id="pEK-di-uI5"/>
+                        <outlet property="missileImageView" destination="udX-GE-vNU" id="5nA-4I-Uix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

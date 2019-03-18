@@ -11,39 +11,39 @@ import UIKit
 class ViewController: UIViewController {
 
     var bulletCount = 100
-    var missleSelected:Missile = .missile1
+    var missileSelected:Missile = .missile1
     var lastTouchesPoint = CGPoint(x: 0, y: 0)
     
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var plan: UIButton!
+    @IBOutlet weak var aircraft: UIButton!
     
     @IBOutlet weak var fireButton: UIButton!
-    @IBOutlet weak var missleImageView: UIImageView!
+    @IBOutlet weak var missileImageView: UIImageView!
     
     @IBAction func selectMissile1(_ sender: UIButton) {
-        missleSelected = .missile1
-        missleImageView.image = UIImage(named: missleSelected.getImageName())
+        missileSelected = .missile1
+        missileImageView.image = UIImage(named: missileSelected.getImageName())
     }
     
     @IBAction func selectMissile2(_ sender: UIButton) {
-        missleSelected = .missile2
-        missleImageView.image = UIImage(named: missleSelected.getImageName())
+        missileSelected = .missile2
+        missileImageView.image = UIImage(named: missileSelected.getImageName())
     }
     
     @IBAction func selectMissile3(_ sender: UIButton) {
-        missleSelected = .missile3
-        missleImageView.image = UIImage(named: missleSelected.getImageName())
+        missileSelected = .missile3
+        missileImageView.image = UIImage(named: missileSelected.getImageName())
     }
     
     @IBAction func fire(_ sender: UIButton) {
         
-        if bulletCount < missleSelected.getBulletCount() {
+        if bulletCount < missileSelected.consumeBulletCount() {
             return
         }
-        bulletCount = bulletCount - missleSelected.getBulletCount()
+        bulletCount = bulletCount - missileSelected.consumeBulletCount()
         countLabel.text = "\(bulletCount)"
         
-        //TODO: fire missle
+        MissileManager.fire(missile: missileSelected, aircraft: aircraft, atSpace: view)
     }
     
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         
         countLabel.text = "\(bulletCount)"
         
-        plan.center = CGPoint(x: view.frame.width/2, y: fireButton.frame.origin.y - 22)
+        aircraft.center = CGPoint(x: view.frame.width/2, y: fireButton.frame.origin.y - 22)
     }
 
     @IBAction func dragPlan(_ sender: UIButton, event: UIEvent) {
