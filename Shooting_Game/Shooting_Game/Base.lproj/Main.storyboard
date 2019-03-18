@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7r-gb-NKr">
                                 <rect key="frame" x="151" y="32" width="216" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-MJ-lTK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-MJ-lTK" userLabel="Missile1">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="72" id="ec2-w8-8UH"/>
@@ -32,10 +32,10 @@
                                         </constraints>
                                         <state key="normal" image="missile-type-1"/>
                                         <connections>
-                                            <action selector="selectMissle1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1VR-w0-dDk"/>
+                                            <action selector="selectMissile1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5m-Q1-fM8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-F8-ZE5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-F8-ZE5" userLabel="Missile2">
                                         <rect key="frame" x="72" y="0.0" width="72" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="GtL-G7-zmg"/>
@@ -43,10 +43,10 @@
                                         </constraints>
                                         <state key="normal" image="missile-type-2"/>
                                         <connections>
-                                            <action selector="selectMissle2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEI-AG-DS3"/>
+                                            <action selector="selectMissile2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E54-Ho-zJc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-Qw-R43">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-Qw-R43" userLabel="Missile3">
                                         <rect key="frame" x="144" y="0.0" width="72" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="GG4-wH-JyG"/>
@@ -54,7 +54,7 @@
                                         </constraints>
                                         <state key="normal" image="missile-type-3"/>
                                         <connections>
-                                            <action selector="selectMissle3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cea-fX-rSq"/>
+                                            <action selector="selectMissile3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdM-pV-dOu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -78,14 +78,6 @@
                                     <action selector="fire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgm-JK-I4H"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-it-LAH">
-                                <rect key="frame" x="147.5" y="440" width="80" height="101"/>
-                                <state key="normal" image="plane"/>
-                                <connections>
-                                    <action selector="dragPlan:event:" destination="BYZ-38-t0r" eventType="touchDragInside" id="Qa0-iI-yTM"/>
-                                    <action selector="planTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fV-qf-iGc"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missile1" translatesAutoresizingMaskIntoConstraints="NO" id="udX-GE-vNU">
                                 <rect key="frame" x="341" y="608" width="18" height="39"/>
                                 <constraints>
@@ -93,6 +85,15 @@
                                     <constraint firstAttribute="width" constant="18" id="kua-A8-xpF"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-it-LAH">
+                                <rect key="frame" x="147.5" y="441" width="80" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plane"/>
+                                <connections>
+                                    <action selector="dragPlan:event:" destination="BYZ-38-t0r" eventType="touchDragInside" id="Qa0-iI-yTM"/>
+                                    <action selector="planTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fV-qf-iGc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -104,19 +105,18 @@
                             <constraint firstItem="bOF-fP-caQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-2" id="Mwt-Nd-ki3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bOF-fP-caQ" secondAttribute="trailing" constant="-2" id="O2y-v6-5tE"/>
                             <constraint firstItem="bOF-fP-caQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-2" id="R4i-Sg-tHc"/>
-                            <constraint firstItem="5NN-TS-Wua" firstAttribute="top" secondItem="Ojd-it-LAH" secondAttribute="bottom" constant="22" id="V2z-SQ-ZmC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bOF-fP-caQ" secondAttribute="bottom" constant="-2" id="ZfT-8F-6Ii"/>
                             <constraint firstItem="5NN-TS-Wua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bKM-uZ-6ET"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M7r-gb-NKr" secondAttribute="trailing" constant="8" id="h8Q-3k-bGt"/>
                             <constraint firstItem="Tut-ms-FeN" firstAttribute="top" secondItem="4fg-AM-uzH" secondAttribute="bottom" id="iJe-88-cBA"/>
                             <constraint firstItem="4fg-AM-uzH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="tVr-OD-TQZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5NN-TS-Wua" secondAttribute="bottom" constant="20" id="w4F-zt-gcD"/>
-                            <constraint firstItem="Ojd-it-LAH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y2I-Mm-Zf7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="Tut-ms-FeN" id="14i-Ju-p9E"/>
+                        <outlet property="fireButton" destination="5NN-TS-Wua" id="F6L-Fr-nxS"/>
                         <outlet property="missleImageView" destination="udX-GE-vNU" id="0d7-eb-Ds8"/>
                         <outlet property="plan" destination="Ojd-it-LAH" id="pEK-di-uI5"/>
                     </connections>
