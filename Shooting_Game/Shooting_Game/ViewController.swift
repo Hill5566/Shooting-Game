@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     var bulletCount = 100
     var missileSelected:Missile = .missile1
+    var missileType:MissileTypes = .missile1
     var lastTouchesPoint = CGPoint(x: 0, y: 0)
     
     @IBOutlet weak var countLabel: UILabel!
@@ -22,16 +23,19 @@ class ViewController: UIViewController {
     
     @IBAction func selectMissile1(_ sender: UIButton) {
         missileSelected = .missile1
+        missileType = .missile1
         missileImageView.image = UIImage(named: missileSelected.getImageName())
     }
     
     @IBAction func selectMissile2(_ sender: UIButton) {
         missileSelected = .missile2
+        missileType = .missile2
         missileImageView.image = UIImage(named: missileSelected.getImageName())
     }
     
     @IBAction func selectMissile3(_ sender: UIButton) {
         missileSelected = .missile3
+        missileType = .missile3
         missileImageView.image = UIImage(named: missileSelected.getImageName())
     }
     
@@ -43,7 +47,10 @@ class ViewController: UIViewController {
         bulletCount = bulletCount - missileSelected.consumeBulletCount()
         countLabel.text = "\(bulletCount)"
         
-        MissileManager.fire(missile: missileSelected, aircraft: aircraft, atSpace: view)
+//        MissileManager.fire(missile: missileSelected, aircraft: aircraft, atSpace: view)
+        
+        let missileCreator = MissileCreator(parentView: view, aircraft: aircraft)
+        missileCreator.create(missile: missileType).fire()
     }
     
     override func viewDidLoad() {

@@ -79,9 +79,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missile1" translatesAutoresizingMaskIntoConstraints="NO" id="udX-GE-vNU">
-                                <rect key="frame" x="341" y="608" width="18" height="39"/>
+                                <rect key="frame" x="341" y="607" width="18" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="HwU-2h-apT"/>
+                                    <constraint firstAttribute="height" constant="40" id="HwU-2h-apT"/>
                                     <constraint firstAttribute="width" constant="18" id="kua-A8-xpF"/>
                                 </constraints>
                             </imageView>

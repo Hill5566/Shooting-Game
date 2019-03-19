@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92A7D152240E3C900A1FAB6 /* Missile1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A7D142240E3C900A1FAB6 /* Missile1.swift */; };
+		E92A7D172240E3D100A1FAB6 /* Missile2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A7D162240E3D100A1FAB6 /* Missile2.swift */; };
+		E92A7D192240E3D700A1FAB6 /* Missile3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A7D182240E3D700A1FAB6 /* Missile3.swift */; };
+		E92A7D1B2240E4EB00A1FAB6 /* BaseMissile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A7D1A2240E4EB00A1FAB6 /* BaseMissile.swift */; };
+		E92A7D1D2240E73E00A1FAB6 /* MissileCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A7D1C2240E73E00A1FAB6 /* MissileCreator.swift */; };
 		E9E6AEB0223F443B000DCB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6AEAF223F443B000DCB83 /* AppDelegate.swift */; };
 		E9E6AEB2223F443B000DCB83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6AEB1223F443B000DCB83 /* ViewController.swift */; };
 		E9E6AEB5223F443B000DCB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E6AEB3223F443B000DCB83 /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E92A7D142240E3C900A1FAB6 /* Missile1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missile1.swift; sourceTree = "<group>"; };
+		E92A7D162240E3D100A1FAB6 /* Missile2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missile2.swift; sourceTree = "<group>"; };
+		E92A7D182240E3D700A1FAB6 /* Missile3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missile3.swift; sourceTree = "<group>"; };
+		E92A7D1A2240E4EB00A1FAB6 /* BaseMissile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMissile.swift; sourceTree = "<group>"; };
+		E92A7D1C2240E73E00A1FAB6 /* MissileCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissileCreator.swift; sourceTree = "<group>"; };
 		E9E6AEAC223F443B000DCB83 /* Shooting_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shooting_Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E6AEAF223F443B000DCB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9E6AEB1223F443B000DCB83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +69,11 @@
 				E9E6AEAF223F443B000DCB83 /* AppDelegate.swift */,
 				E9E6AEB1223F443B000DCB83 /* ViewController.swift */,
 				E9E6AEC1223F4745000DCB83 /* MissileManager.swift */,
+				E92A7D1C2240E73E00A1FAB6 /* MissileCreator.swift */,
+				E92A7D1A2240E4EB00A1FAB6 /* BaseMissile.swift */,
+				E92A7D142240E3C900A1FAB6 /* Missile1.swift */,
+				E92A7D162240E3D100A1FAB6 /* Missile2.swift */,
+				E92A7D182240E3D700A1FAB6 /* Missile3.swift */,
 				E9E6AEB3223F443B000DCB83 /* Main.storyboard */,
 				E9E6AEB6223F443C000DCB83 /* Assets.xcassets */,
 				E9E6AEB8223F443C000DCB83 /* LaunchScreen.storyboard */,
@@ -138,7 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92A7D152240E3C900A1FAB6 /* Missile1.swift in Sources */,
+				E92A7D172240E3D100A1FAB6 /* Missile2.swift in Sources */,
+				E92A7D1B2240E4EB00A1FAB6 /* BaseMissile.swift in Sources */,
+				E92A7D192240E3D700A1FAB6 /* Missile3.swift in Sources */,
 				E9E6AEC2223F4745000DCB83 /* MissileManager.swift in Sources */,
+				E92A7D1D2240E73E00A1FAB6 /* MissileCreator.swift in Sources */,
 				E9E6AEB2223F443B000DCB83 /* ViewController.swift in Sources */,
 				E9E6AEB0223F443B000DCB83 /* AppDelegate.swift in Sources */,
 			);
