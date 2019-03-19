@@ -22,35 +22,49 @@ class ViewController: UIViewController {
     @IBOutlet weak var missileImageView: UIImageView!
     
     @IBAction func selectMissile1(_ sender: UIButton) {
-        missileSelected = .missile1
+//        missileSelected = .missile1
+//        missileImageView.image = UIImage(named: missileSelected.getImageName())
+        
         missileType = .missile1
-        missileImageView.image = UIImage(named: missileSelected.getImageName())
+        missileImageView.image = UIImage(named: MissileImageNames.missile1.rawValue)
     }
     
     @IBAction func selectMissile2(_ sender: UIButton) {
-        missileSelected = .missile2
+//        missileSelected = .missile2
+//        missileImageView.image = UIImage(named: missileSelected.getImageName())
+        
         missileType = .missile2
-        missileImageView.image = UIImage(named: missileSelected.getImageName())
+        missileImageView.image = UIImage(named: MissileImageNames.missile2.rawValue)
+
     }
     
     @IBAction func selectMissile3(_ sender: UIButton) {
-        missileSelected = .missile3
+//        missileSelected = .missile3
+//        missileImageView.image = UIImage(named: missileSelected.getImageName())
+
         missileType = .missile3
-        missileImageView.image = UIImage(named: missileSelected.getImageName())
+        missileImageView.image = UIImage(named: MissileImageNames.missile3.rawValue)
     }
     
     @IBAction func fire(_ sender: UIButton) {
         
-        if bulletCount < missileSelected.consumeBulletCount() {
+        let missileCreator = MissileCreator(parentView: view, aircraft: aircraft)
+        let bullet = missileCreator.create(missile: missileType)
+        
+        if bulletCount < bullet.consumeBullet {
             return
         }
-        bulletCount = bulletCount - missileSelected.consumeBulletCount()
+        
+        bulletCount = bulletCount - bullet.consumeBullet
         countLabel.text = "\(bulletCount)"
+        bullet.fire()
         
-//        MissileManager.fire(missile: missileSelected, aircraft: aircraft, atSpace: view)
-        
-        let missileCreator = MissileCreator(parentView: view, aircraft: aircraft)
-        missileCreator.create(missile: missileType).fire()
+//        if bulletCount < missileSelected.consumeBulletCount() {
+//            return
+//        }
+//        bulletCount = bulletCount - missileSelected.consumeBulletCount()
+//        countLabel.text = "\(bulletCount)"
+//        MissileManager.fire(missile: missileSelected, aircraft: aircraft, atSpace: view)        
     }
     
     override func viewDidLoad() {

@@ -12,7 +12,7 @@ class Missile3: BaseMissile {
     override func configure() {
         super.configure()
         
-        missileImageView.image = UIImage(named: "missile3")
+        missileImageView.image = UIImage(named: MissileImageNames.missile3.rawValue)
         speed = 10
         consumeBullet = 3
     }

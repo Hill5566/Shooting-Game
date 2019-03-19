@@ -33,7 +33,7 @@ class MissileCreator {
             
         case .missile3:
             
-            return Missile3(parentView: parentView, aircraft: aircraft)                        
+            return Missile3(parentView: parentView, aircraft: aircraft)
         }
     }
 }
