@@ -14,6 +14,6 @@ class Missile3: BaseMissile {
         
         missileImageView.image = UIImage(named: MissileImageNames.missile3.rawValue)
         speed = 10
-        consumeBullet = 3
+        consumeBulletCount = 3
     }
 }

@@ -51,11 +51,11 @@ class ViewController: UIViewController {
         let missileCreator = MissileCreator(parentView: view, aircraft: aircraft)
         let bullet = missileCreator.create(missile: missileType)
         
-        if bulletCount < bullet.consumeBullet {
+        if bulletCount < bullet.consumeBulletCount {
             return
         }
         
-        bulletCount = bulletCount - bullet.consumeBullet
+        bulletCount = bulletCount - bullet.consumeBulletCount
         countLabel.text = "\(bulletCount)"
         bullet.fire()
         

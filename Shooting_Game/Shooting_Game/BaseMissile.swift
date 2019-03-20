@@ -17,7 +17,7 @@ protocol MissileProtocol {
     var parentView: UIView { get }
     var aircraft:UIButton { get }
     var speed:Double { get }
-    var consumeBullet:Int { get }
+    var consumeBulletCount:Int { get }
 }
 
 class BaseMissile: MissileProtocol {
@@ -25,15 +25,15 @@ class BaseMissile: MissileProtocol {
     var missileImageView: UIImageView
     var parentView: UIView
     var aircraft:UIButton
-    var consumeBullet: Int
+    var consumeBulletCount: Int
     var speed: Double
     
-    init(parentView: UIView, aircraft:UIButton, imageName:String = "missile1", speed:Double = 30, consumeBullet:Int = 1) {
+    init(parentView: UIView, aircraft:UIButton, imageName:String = "missile1", speed:Double = 30, consumeBulletCount:Int = 1) {
         self.parentView = parentView
         self.aircraft = aircraft
         self.missileImageView = UIImageView(image: UIImage(named: imageName))
         self.speed = speed
-        self.consumeBullet = consumeBullet
+        self.consumeBulletCount = consumeBulletCount
     }
     
     func configure() {
